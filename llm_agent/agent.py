@@ -47,7 +47,9 @@ class decisionHandler:
         # )
         print(user_input)
         _next = bool(re.search(r"\b(next)\b", user_input, re.IGNORECASE))
-        _summarize = bool(re.search(r"\b(summarise)\b", user_input, re.IGNORECASE))
+        _summarize = bool(
+            re.search(r"\b(summarise|summarize)\b", user_input, re.IGNORECASE)
+        )
         _play = bool(re.search(r"\b(play)\b", user_input, re.IGNORECASE))
 
         print(_next, _summarize, _play)
